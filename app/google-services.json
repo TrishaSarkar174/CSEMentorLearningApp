@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "578121819436",
+    "project_id": "csementorlearningapp",
+    "storage_bucket": "csementorlearningapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:578121819436:android:f46b8d6640d52358953889",
+        "android_client_info": {
+          "package_name": "com.hfad.csementorlearningapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsw-U8HngyQK7bTM2zKoJaBDJsQspUMhY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.CSEMentorLearningApp" parent="Theme.MaterialComponents.Light.DarkActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+    <!--Theme.Material3.DayNight.NoActionBar -->
+
+    <style name="Theme.CSEMentorLearningApp" parent="Base.Theme.CSEMentorLearningApp" />
+
+    <!-- No ActionBar theme for specific activities -->
+    <style name="Theme.CSEMentorLearningApp.NoActionBar" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>

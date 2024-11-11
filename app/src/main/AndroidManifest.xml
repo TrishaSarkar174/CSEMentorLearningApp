@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CSEMentorLearningApp"
+        tools:targetApi="31">
+        <activity
+            android:name=".authentication.RegisterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.quiz.StartQuiz"
+            android:exported="false" />
+        <activity
+            android:name=".ui.code.CodeActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.code.CodeCategory"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.three.HtmlAndNewElements"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.three.MultimediaInHtml"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.three.WorkingWithForms"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.three.HtmlElementsAndAttributes"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.NpCompleteness"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.SortingAndSearchingAlgorithms"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.GraphAlgorithms"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.GreedyAlgorithms"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.DynamicProgramming"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.DivideAndConquer"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.IntroductionToCpp"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.IntroductionToCProgramming"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.three.IntroductionToHtml"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.IntroductionToAlgorithms"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.AdvancedDataStructures"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.SortingAlgorithms"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.HeapsAndPriorityQueues"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.Hashing"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.Graphs"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.Trees"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.StacksAndQueues"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.ArraysAndLinkedLists"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.IntroductionToDataStructure"
+            android:exported="false" />
+        <activity
+            android:name=".chaptertopics.TopicActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.CSEMentorLearningApp.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SplashScreen"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
