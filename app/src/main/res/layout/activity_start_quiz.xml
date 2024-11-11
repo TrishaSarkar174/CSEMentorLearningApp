@@ -8,215 +8,124 @@
     android:layout_height="match_parent"
     tools:context=".ui.quiz.StartQuiz">
 
-    <ScrollView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:fillViewport="true">
+        android:layout_height="match_parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
-            <!--            <LinearLayout-->
-            <!--                android:layout_width="match_parent"-->
-            <!--                android:layout_height="match_parent"-->
-            <!--                android:orientation="vertical"-->
-            <!--                app:layout_constraintEnd_toEndOf="parent"-->
-            <!--                app:layout_constraintStart_toStartOf="parent"-->
-            <!--                app:layout_constraintTop_toTopOf="parent">-->
-
-            <!--                <TextView-->
-            <!--                    android:id="@+id/question"-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_marginHorizontal="16dp"-->
-            <!--                    android:layout_marginTop="16dp"-->
-            <!--                    android:layout_marginBottom="5dp"-->
-            <!--                    android:text="Question"-->
-            <!--                    android:textColor="@color/textColor"-->
-            <!--                    android:textSize="18sp" />-->
-
-            <!--                <TextView-->
-            <!--                    android:id="@+id/indicator"-->
-            <!--                    android:layout_width="366dp"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:text="5/10"-->
-            <!--                    android:textColor="@color/textColor"-->
-            <!--                    android:textSize="16sp"-->
-            <!--                    android:textStyle="italic" />-->
-
-            <!--                <LinearLayout-->
-            <!--                    android:layout_width="match_parent"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:layout_marginTop="10dp"-->
-            <!--                    android:orientation="vertical"-->
-            <!--                    android:padding="16dp">-->
-
-            <!--                    <com.google.android.material.button.MaterialButton-->
-            <!--                        android:id="@+id/button1"-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_margin="16dp"-->
-            <!--                        android:text="Option"-->
-            <!--                        android:textAllCaps="false" />-->
-
-            <!--                    <com.google.android.material.button.MaterialButton-->
-            <!--                        android:id="@+id/button2"-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_margin="16dp"-->
-            <!--                        android:text="Option"-->
-            <!--                        android:textAllCaps="false" />-->
-
-            <!--                    <com.google.android.material.button.MaterialButton-->
-            <!--                        android:id="@+id/button3"-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_margin="16dp"-->
-            <!--                        android:text="Option"-->
-            <!--                        android:textAllCaps="false" />-->
-
-            <!--                    <com.google.android.material.button.MaterialButton-->
-            <!--                        android:id="@+id/button4"-->
-            <!--                        android:layout_width="match_parent"-->
-            <!--                        android:layout_height="wrap_content"-->
-            <!--                        android:layout_margin="16dp"-->
-            <!--                        android:text="Option"-->
-            <!--                        android:textAllCaps="false" />-->
-            <!--                </LinearLayout>-->
-
-            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-            <!--                    android:id="@+id/share_button"-->
-            <!--                    android:layout_width="80dp"-->
-            <!--                    android:layout_height="61dp"-->
-            <!--                    android:backgroundTint="#FA7074"-->
-            <!--                    android:text="Share"-->
-            <!--                    android:textAllCaps="false" />-->
-
-            <!--                <com.google.android.material.radiobutton.MaterialRadioButton-->
-            <!--                    android:id="@+id/next_button"-->
-            <!--                    android:layout_width="74dp"-->
-            <!--                    android:layout_height="wrap_content"-->
-            <!--                    android:backgroundTint="#a4a4a4"-->
-            <!--                    android:text="Next"-->
-            <!--                    android:textAllCaps="false" />-->
-
-            <!--            </LinearLayout>-->
-
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
+            <TextView
+                android:id="@+id/question"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <TextView
-                    android:id="@+id/question"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="16dp"
-                    android:layout_marginTop="16dp"
-                    android:layout_marginBottom="5dp"
-                    android:padding="16dp"
-                    android:text="Question"
-                    android:textColor="@color/textColor"
-                    android:textSize="18sp" />
-
-                <TextView
-                    android:id="@+id/indicator"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:padding="3dp"
-                    android:text="5/10"
-                    android:textSize="16sp"
-                    android:textStyle="italic" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:orientation="vertical"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="5dp"
                 android:padding="16dp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout">
+                android:text="Question"
+                android:textColor="@color/textColor"
+                android:textSize="18sp" />
 
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option"
-                    android:textAllCaps="false" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option"
-                    android:textAllCaps="false" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option"
-                    android:textAllCaps="false" />
-
-                <com.google.android.material.button.MaterialButton
-                    android:id="@+id/button4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="16dp"
-                    android:text="Option"
-                    android:textAllCaps="false" />
-            </LinearLayout>
-
-            <com.google.android.material.radiobutton.MaterialRadioButton
-                android:id="@+id/next_btn"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/indicator"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:backgroundTint="#848484"
-                android:text="Next"
-                android:textAllCaps="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="5/10"
+                android:textColor="@color/textColor"
+                android:textSize="16sp"
+                android:textStyle="italic" />
+        </LinearLayout>
 
-            <com.google.android.material.radiobutton.MaterialRadioButton
-                android:id="@+id/share_btn"
-                android:layout_width="0dp"
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
-                android:layout_marginEnd="16dp"
-                android:backgroundTint="#FA7074"
-                android:text="Share"
-                android:textAllCaps="false"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+                android:layout_margin="16dp"
+                android:text="Option"
+                android:textAllCaps="false" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline"
-                android:layout_width="wrap_content"
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="205dp" />
+                android:layout_margin="16dp"
+                android:text="Option"
+                android:textAllCaps="false" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </ScrollView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Option"
+                android:textAllCaps="false" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:text="Option"
+                android:textAllCaps="false" />
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/next_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="257dp"
+            android:backgroundTint="#848484"
+            android:text="Next"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/share_btn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="34dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="257dp"
+            android:backgroundTint="#FA7074"
+            android:text="Share"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="192dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 </LinearLayout>

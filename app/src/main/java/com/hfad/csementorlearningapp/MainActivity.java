@@ -17,6 +17,10 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.hfad.csementorlearningapp.authentication.LoginActivity;
+import com.hfad.csementorlearningapp.authentication.ProfileActivity;
 import com.hfad.csementorlearningapp.authentication.RegisterActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -24,6 +28,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle toggle;
     private NavigationView navigationView;
+    FirebaseUser user;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +58,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     @Override
+    protected  void onStart(){
+        super.onStart();
+        user = FirebaseAuth.getInstance().getCurrentUser();
+    }
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu with profile option
         getMenuInflater().inflate(R.menu.option_menu, menu);
@@ -65,8 +76,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             return true;
         }
         if (item.getItemId() == R.id.profile) {
-            startActivity(new Intent(MainActivity.this, RegisterActivity.class));
-            return true;
+            if(user!=null)
+            {
+                startActivity(new Intent(MainActivity.this, ProfileActivity.class));
+            }
+            else{
+                startActivity(new Intent(MainActivity.this, LoginActivity.class));
+            }
+
         }
         return super.onOptionsItemSelected(item);
     }

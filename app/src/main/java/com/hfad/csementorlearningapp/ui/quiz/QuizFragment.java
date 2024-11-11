@@ -10,7 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.hfad.csementorlearningapp.R;
+import com.hfad.csementorlearningapp.authentication.LoginActivity;
 
 public class QuizFragment extends Fragment {
 
@@ -21,7 +24,7 @@ public class QuizFragment extends Fragment {
 
     Button playQuiz;
 
-    //FirebaseUser user;
+    FirebaseUser user;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -30,17 +33,17 @@ public class QuizFragment extends Fragment {
         View root = inflater.inflate(R.layout.fragment_quiz, container, false);
 
         playQuiz = root.findViewById(R.id.play_quiz);
-       // user = FirebaseAuth.getInstance().getCurrentUser();
+        user = FirebaseAuth.getInstance().getCurrentUser();
 
         playQuiz.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                if(user != null){
-//                    startActivity(new Intent(getContext(),StartQuiz.class));
-//                }
-//                else{
-//                    startActivity(new Intent(getContext(),LoginActivity.class));
-//                }
+                if(user != null){
+                    startActivity(new Intent(getContext(),StartQuiz.class));
+                }
+                else{
+                    startActivity(new Intent(getContext(), LoginActivity.class));
+                }
             }
         });
 
