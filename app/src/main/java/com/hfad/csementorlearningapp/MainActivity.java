@@ -22,6 +22,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.hfad.csementorlearningapp.authentication.LoginActivity;
 import com.hfad.csementorlearningapp.authentication.ProfileActivity;
 import com.hfad.csementorlearningapp.authentication.RegisterActivity;
+import com.hfad.csementorlearningapp.leaderboard.LeaderboardActivity;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -93,11 +94,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         // Handle navigation drawer item selection with if-else statements
         int itemId = item.getItemId();
 
-        if (itemId == R.id.pdf) {
+        if(itemId ==R.id.leaderboard){
+            startActivity(new Intent(MainActivity.this, LeaderboardActivity.class));
+        } else if (itemId == R.id.pdf) {
             Toast.makeText(this, "Ebook", Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.bookmark) {
             Toast.makeText(this, "Bookmark List", Toast.LENGTH_SHORT).show();
-        } else if (itemId == R.id.share) {
+        }else if(itemId ==R.id.DaylightMode){
+            Toast.makeText(this,"Day Light Mode",Toast.LENGTH_SHORT).show();
+        }else if (itemId == R.id.share) {
             Toast.makeText(this, "Share", Toast.LENGTH_SHORT).show();
         } else if (itemId == R.id.rate) {
             Toast.makeText(this, "Rate Us", Toast.LENGTH_SHORT).show();

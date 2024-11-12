@@ -1,6 +1,7 @@
 package com.hfad.csementorlearningapp.ui.quiz;
 
 import android.animation.Animator;
+import android.content.Intent;
 import android.content.res.ColorStateList;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -85,7 +86,44 @@ public class StartQuiz extends AppCompatActivity {
                         });
                     }
 
+                      nextBtn.setOnClickListener(new View.OnClickListener() {
+                          @Override
+                          public void onClick(View view) {
+                              nextBtn.setEnabled(false);
+                              nextBtn.setAlpha(0.7f);
+                              enabled(true);
+                              position++;
 
+
+                              if(position == list.size()){
+                                Intent intent=new Intent(StartQuiz.this,ScoreActivity.class);
+                                intent.putExtra("score",score);
+                                intent.putExtra("total",list.size());
+                                startActivity(intent);
+                                finish();
+                                return;
+                              }
+                              count=0;
+                              loadQuestion(questionTxt,0,list.get(position).getQuestion());
+
+                          }
+                      });
+                    shareBtn.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View view) {
+                            String body = "*"+list.get(position).getQuestion()+"*\n"+
+                                    "(a) "+list.get(position).getOption1()+"\n"+
+                                    "(b) "+list.get(position).getOption2()+"\n"+
+                                    "(c) "+list.get(position).getOption3()+"\n"+
+                                    "(d) "+list.get(position).getOption4();
+
+                            Intent intent = new Intent(Intent.ACTION_SEND);
+                            intent.setType("Text/Plain");
+                            intent.putExtra(Intent.EXTRA_SUBJECT,"Learning App");
+                            intent.putExtra(Intent.EXTRA_TEXT,body);
+                            startActivity(Intent.createChooser(intent,"Share via"));
+                        }
+                    });
 
                 } else {
                     Toast.makeText(StartQuiz.this, "No data found", Toast.LENGTH_SHORT).show();
@@ -100,6 +138,9 @@ public class StartQuiz extends AppCompatActivity {
     }
 
     private void checkAnswer(Button selectedOption) {
+        enabled(false);
+        nextBtn.setEnabled(true);
+        nextBtn.setAlpha(1);
      if(selectedOption.getText().toString().equals(list.get(position).getAnswer())){
          score++;
          selectedOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#4caf50")));
@@ -108,6 +149,16 @@ public class StartQuiz extends AppCompatActivity {
         Button correctOption = container.findViewWithTag(list.get(position).getAnswer());
         correctOption.setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#4caf50")));
      }
+    }
+
+    private void enabled(Boolean enable){
+        for (int i=0; i<4; i++){
+            container.getChildAt(i).setEnabled(enable);
+            if(enable){
+                container.getChildAt(i).setBackgroundTintList(ColorStateList.valueOf(Color.parseColor("#989898")));
+
+            }
+        }
     }
 
     private void loadQuestion(final View view, final int value, final String data) {
