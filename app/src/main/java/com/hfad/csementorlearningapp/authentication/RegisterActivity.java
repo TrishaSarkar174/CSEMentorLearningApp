@@ -65,7 +65,7 @@ public class RegisterActivity extends AppCompatActivity {
         regEmail= (EditText) findViewById(R.id.reg_email);
         regPassword=  findViewById(R.id.reg_password);
         regButton= findViewById(R.id.register_button);
-        userImage=(ImageView) findViewById(R.id.reg_name);
+        userImage=(ImageView) findViewById(R.id.reg_image);
         progressBar = (ProgressBar) findViewById(R.id.regProgressBar);
         progressBar.setVisibility(View.GONE);
         loginBtn= findViewById(R.id.reg_login_btn);
@@ -144,7 +144,7 @@ public class RegisterActivity extends AppCompatActivity {
           email=regEmail.getText().toString().trim();
           password=regPassword.getText().toString().trim();
 
-          if(name.isEmpty() || TextUtils.isEmpty(email) || password.isEmpty() || pickedImgUri == null){
+          if(name.isEmpty() || TextUtils.isEmpty(email) || password.isEmpty() ){
               Toast.makeText(this,"please Enter All Fields", Toast.LENGTH_SHORT).show();
           }else{
               progressBar.setVisibility(View.VISIBLE);

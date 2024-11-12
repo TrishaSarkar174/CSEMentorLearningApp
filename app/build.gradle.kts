@@ -56,7 +56,9 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
 
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    //annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
     implementation ("de.hdodenhof:circleimageview:3.0.1")
+   // implementation ("com.google.firebase:firebase-auth:23.1.0")
     //implementation ("com.github.Thereisnospon:CodeView:1.3.1")
     //implementation("thereisnospon.codeview:codeview:0.3.1")
     //implementation("thereisnospon.codeview:codeview:0.3.1")
