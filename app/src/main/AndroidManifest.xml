@@ -17,6 +17,75 @@
         android:theme="@style/Theme.CSEMentorLearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".ui.code.ChapterAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ui.code.ChapterActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.code.VideoListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.ReferredBookDS"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.ReferredBook"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.SelectionSort"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.MergeSort"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.HeapSort"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.MCM"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.MSTKruskal"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.MSTPrims"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.Dijkstra"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.FractionalKnapsackHuffmanCode"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.CoinChange"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.ActivitySelectionProblem"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.ElementsofDP"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.SCC"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.TopologicalSort"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.DFS"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.two.BFS"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.ArrayOperations"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.StringProcessing"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.one.BasicTerminologies"
+            android:exported="false" />
+        <activity
             android:name=".leaderboard.LeaderboardActivity"
             android:exported="false" />
         <activity
@@ -98,13 +167,13 @@
             android:name=".chapter.one.Graphs"
             android:exported="false" />
         <activity
-            android:name=".chapter.one.Trees"
+            android:name=".chapter.one.AVLTree"
             android:exported="false" />
         <activity
-            android:name=".chapter.one.StacksAndQueues"
+            android:name=".chapter.one.StacksAndQueuesRecursion"
             android:exported="false" />
         <activity
-            android:name=".chapter.one.ArraysAndLinkedLists"
+            android:name=".chapter.one.LinkedLists"
             android:exported="false" />
         <activity
             android:name=".chapter.one.IntroductionToDataStructure"

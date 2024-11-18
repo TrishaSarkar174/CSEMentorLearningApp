@@ -42,6 +42,7 @@ dependencies {
     implementation(libs.firebase.storage)
     implementation(libs.firebase.auth)
     implementation(libs.firebase.database)
+    implementation(libs.recyclerview)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
@@ -56,12 +57,18 @@ dependencies {
     implementation("com.google.firebase:firebase-analytics")
 
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+    implementation ("com.joanzapata.pdfview:android-pdfview:1.0.4@aar")
     //annotationProcessor ("com.github.bumptech.glide:compiler:4.15.1")
     implementation ("de.hdodenhof:circleimageview:3.0.1")
-   // implementation ("com.google.firebase:firebase-auth:23.1.0")
-    //implementation ("com.github.Thereisnospon:CodeView:1.3.1")
-    //implementation("thereisnospon.codeview:codeview:0.3.1")
-    //implementation("thereisnospon.codeview:codeview:0.3.1")
+    implementation ("com.squareup.picasso:picasso:2.71828")
+    implementation ("androidx.recyclerview:recyclerview:1.2.1")
+
+
+    //implementation (libs.android.pdf.viewer)
+   // implementation ("com.github.barteksc:android-pdf-viewer:3.2.0-beta.1")
+
+
+
 
 
 }
