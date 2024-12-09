@@ -17,14 +17,17 @@
         android:theme="@style/Theme.CSEMentorLearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".ContributorsActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.code.ChapterAdapter"
             android:exported="false" />
         <activity
             android:name=".ui.code.ChapterActivity"
             android:exported="false" />
-        <activity
-            android:name=".ui.code.VideoListActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".ui.code.VideoListActivity"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".chapter.one.ReferredBookDS"
             android:exported="false" />
@@ -55,9 +58,9 @@
         <activity
             android:name=".chapter.two.FractionalKnapsackHuffmanCode"
             android:exported="false" />
-        <activity
-            android:name=".chapter.two.CoinChange"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".chapter.two.CoinChange"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".chapter.two.ActivitySelectionProblem"
             android:exported="false" />
@@ -121,24 +124,24 @@
         <activity
             android:name=".chapter.three.HtmlElementsAndAttributes"
             android:exported="false" />
-        <activity
-            android:name=".chapter.two.NpCompleteness"
-            android:exported="false" />
-        <activity
-            android:name=".chapter.two.SortingAndSearchingAlgorithms"
-            android:exported="false" />
-        <activity
-            android:name=".chapter.two.GraphAlgorithms"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".chapter.two.NpCompleteness"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".chapter.two.SortingAndSearchingAlgorithms"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".chapter.two.GraphAlgorithms"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".chapter.two.GreedyAlgorithms"
             android:exported="false" />
         <activity
             android:name=".chapter.two.DynamicProgramming"
             android:exported="false" />
-        <activity
-            android:name=".chapter.two.DivideAndConquer"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".chapter.two.DivideAndConquer"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".chapter.five.IntroductionToCpp"
             android:exported="false" />
@@ -148,21 +151,21 @@
         <activity
             android:name=".chapter.three.IntroductionToHtml"
             android:exported="false" />
-        <activity
-            android:name=".chapter.two.IntroductionToAlgorithms"
-            android:exported="false" />
-        <activity
-            android:name=".chapter.one.AdvancedDataStructures"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".chapter.two.IntroductionToAlgorithms"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".chapter.one.AdvancedDataStructures"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".chapter.one.SortingAlgorithms"
             android:exported="false" />
-        <activity
-            android:name=".chapter.one.HeapsAndPriorityQueues"
-            android:exported="false" />
-        <activity
-            android:name=".chapter.one.Hashing"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name=".chapter.one.HeapsAndPriorityQueues"-->
+<!--            android:exported="false" />-->
+<!--        <activity-->
+<!--            android:name=".chapter.one.Hashing"-->
+<!--            android:exported="false" />-->
         <activity
             android:name=".chapter.one.Graphs"
             android:exported="false" />

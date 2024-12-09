@@ -1,11 +1,11 @@
 package com.hfad.csementorlearningapp.leaderboard;
 
-
 public class ScoreData {
-    String name,image;
-    long score;
+    private String name, image; // image URL
+    private long score;
 
     public ScoreData() {
+        // Default constructor for Firebase
     }
 
     public ScoreData(String image, String name, long score) {

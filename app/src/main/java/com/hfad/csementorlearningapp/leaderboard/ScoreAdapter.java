@@ -8,6 +8,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
@@ -15,11 +16,10 @@ import com.hfad.csementorlearningapp.R;
 
 import java.util.List;
 
-public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewAdapater> {
+public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewHolder> {
 
-    List<ScoreData> list;
-    Context context;
-
+    private final Context context;
+    private final List<ScoreData> list;
 
     public ScoreAdapter(Context context, List<ScoreData> list) {
         this.context = context;
@@ -28,52 +28,76 @@ public class ScoreAdapter extends RecyclerView.Adapter<ScoreAdapter.ScoreViewAda
 
     @NonNull
     @Override
-    public ScoreViewAdapater onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.score_list_item,parent,false);
-        return new ScoreViewAdapater(view);
+    public ScoreViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        // Inflate the item layout for leaderboard entries
+        View view = LayoutInflater.from(context).inflate(R.layout.item_leaderboard, parent, false);
+        return new ScoreViewHolder(view);
     }
 
-    int k;
-
-
     @Override
-    public void onBindViewHolder(@NonNull ScoreViewAdapater holder, int position) {
+    public void onBindViewHolder(@NonNull ScoreViewHolder holder, int position) {
+        // Get current data
+        ScoreData data = list.get(position);
 
-        k=list.size() -50;
+        // Set rank text
+        holder.rank.setText(String.valueOf(position + 1));
 
+        // Assign rank badges and colors
+        int rankColor;
+        int rankIcon = R.drawable.default_rank; // Default rank icon
+        switch (position) {
+            case 0:
+                rankColor = R.color.gold;
+                rankIcon = R.drawable.gold_medal;
+                break;
+            case 1:
+                rankColor = R.color.silver;
+                rankIcon = R.drawable.silver_medal;
+                break;
+            case 2:
+                rankColor = R.color.bronze;
+                rankIcon = R.drawable.bronze_medal;
+                break;
+            default:
+                rankColor = R.color.default_rank_color; // Fallback color for other ranks
+                break;
+        }
+        holder.rank.setBackgroundTintList(ContextCompat.getColorStateList(context, rankColor));
+        holder.rankIcon.setImageResource(rankIcon);
 
-        ScoreData currentItem = list.get(position +k );
-        holder.name.setText(currentItem.getName());
-        holder.score.setText(String.valueOf(currentItem.getScore()));
-        holder.rank.setText(String.valueOf(list.size()-(position+k)));
-        Glide.with(context).load(currentItem.getImage()).into(holder.imageView);
+        // Load profile image from the image URL using Glide
+        if (data.getImage() != null && !data.getImage().isEmpty()) {
+            Glide.with(context)
+                    .load(data.getImage()) // Load image from URL
+                    .placeholder(R.drawable.placeholder) // Placeholder image while loading
+                    .error(R.drawable.placeholder) // Fallback image in case of error
+                    .into(holder.profile);
+        } else {
+            holder.profile.setImageResource(R.drawable.placeholder);
+        }
 
-
+        // Set name and score
+        holder.name.setText(data.getName());
+        holder.score.setText("Score: " + data.getScore());
     }
 
     @Override
     public int getItemCount() {
-
-        return Math.min(list.size(),50);
-
+        return list.size(); // Return the size of the data list
     }
 
-    public class ScoreViewAdapater extends RecyclerView.ViewHolder {
+    public static class ScoreViewHolder extends RecyclerView.ViewHolder {
+        TextView rank, name, score;
+        ImageView profile, rankIcon;
 
-        ImageView imageView;
-        TextView name,score,rank;
-
-
-
-        public ScoreViewAdapater(@NonNull View itemView) {
+        public ScoreViewHolder(@NonNull View itemView) {
             super(itemView);
-
-            imageView=itemView.findViewById(R.id.score_user_img);
-            name=itemView.findViewById(R.id.score_user_name);
-            score=itemView.findViewById(R.id.score_user_result);
-            rank=itemView.findViewById(R.id.score_user_rank);
-
-
+            // Initialize view components
+            rank = itemView.findViewById(R.id.leaderboard_rank);
+            name = itemView.findViewById(R.id.leaderboard_name);
+            score = itemView.findViewById(R.id.leaderboard_score);
+            profile = itemView.findViewById(R.id.leaderboard_profile);
+            rankIcon = itemView.findViewById(R.id.leaderboard_rank_icon); // Add new ImageView for rank icon
         }
     }
 }

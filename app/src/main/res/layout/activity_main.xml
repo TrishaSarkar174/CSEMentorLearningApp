@@ -59,6 +59,8 @@
         android:fitsSystemWindows="true"
         app:menu="@menu/nav_drawer"
         app:headerLayout="@layout/nav_header_layout"
-        app:itemTextAppearance="?android:attr/textAppearanceMedium" />
+        app:itemIconTint="@null"
+        app:itemTextAppearance="@style/TextAppearance.AppCompat.Medium"
+        app:itemTextColor="@color/nav_text_color" /> />
 
 </androidx.drawerlayout.widget.DrawerLayout>
