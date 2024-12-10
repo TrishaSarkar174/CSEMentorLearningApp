@@ -1,4 +1,4 @@
-package com.hfad.csementorlearningapp.chapter.five;
+package com.hfad.csementorlearningapp.chapter.nine;
 
 import android.os.Bundle;
 import android.util.Log;
@@ -23,22 +23,20 @@ import com.joanzapata.pdfview.PDFView;
 import java.io.File;
 import java.io.IOException;
 
-public class IntroductionToCpp extends AppCompatActivity {
+public class MulticoreComputers extends AppCompatActivity {
     private PDFView pdfView;
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_introduction_to_cpp);
+        setContentView(R.layout.activity_multicore_computers);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-
         pdfView = findViewById(R.id.pdfview);
         firebaseStorage = FirebaseStorage.getInstance();
 
@@ -46,7 +44,7 @@ public class IntroductionToCpp extends AppCompatActivity {
     }
     private void loadPdfFromFirebase() {
         // Adjust the path to your PDF file in Firebase Storage
-        storageReference = firebaseStorage.getReferenceFromUrl("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/CourseDetailsPdf%2FC%2B%2B%2FBasicsofC%2B%2B.pdf?alt=media&token=44ccb8fd-00d8-4a65-9bf9-09d25c1ab54d");
+        storageReference = firebaseStorage.getReferenceFromUrl("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/CourseDetailsPdf%2FComputerArchitecture%2FMulticoreComputers.pdf?alt=media&token=bf5b5ace-7b71-4d0a-a668-012975c1d720");
 
         try {
             File localFile = File.createTempFile("temp_pdf", ".pdf");
@@ -58,7 +56,7 @@ public class IntroductionToCpp extends AppCompatActivity {
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
-                    Toast.makeText(IntroductionToCpp.this, "Failed to load PDF", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MulticoreComputers.this, "Failed to load PDF", Toast.LENGTH_SHORT).show();
                     Log.e("PDF_LOAD_ERROR", "Error loading PDF", exception);
                 }
             });

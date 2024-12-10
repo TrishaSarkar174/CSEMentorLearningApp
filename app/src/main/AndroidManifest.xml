@@ -17,6 +17,84 @@
         android:theme="@style/Theme.CSEMentorLearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".chapter.nine.RISC"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.ProcessStructureAndFunction"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.ParallelProcessing"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.MulticoreComputers"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.InstructionSet"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.InstructionLevelParallelism"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.InputOutput"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.ControlUnitOperation"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.ExternalMemory"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.CacheMemory"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.InternalMemory"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.ComputerFunctionAndInterconnection"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.BasicConceptsAndComputerEvolution"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.WilliamStallingsBook"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.nine.ComputerArithmetic"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.JUnitExamples"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.Agile"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.BlackBoxTesting"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.WhiteBoxTesting"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.IssueAndBugTracking"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.DesignPrinciple"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.SDLCAndSWProcessModel"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.ArchitecturalPattern"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.DocumentationAndCodingStandards"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.UserStory"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.eight.BasicOfSWE"
+            android:exported="false" />
+        <activity
             android:name=".chapter.seven.ATM"
             android:exported="false" />
         <activity

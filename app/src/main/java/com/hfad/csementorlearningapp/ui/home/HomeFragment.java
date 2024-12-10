@@ -20,8 +20,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     public HomeFragment() {
     }
 
-    CardView heading1, heading2, heading3, heading4, heading5,heading6,heading7;
-    ImageView image1,image2,image3,image4,image5,image6,image7;
+    CardView heading1, heading2, heading3, heading4, heading5,heading6,heading7,heading8,heading9;
+    ImageView image1,image2,image3,image4,image5,image6,image7,image8,image9;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -35,6 +35,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         heading5 = view.findViewById(R.id.cpp);
         heading6 = view.findViewById(R.id.Algorithm2);
         heading7 = view.findViewById(R.id.CNN);
+        heading8= view.findViewById(R.id.SWE);
+        heading9= view.findViewById(R.id.COA);
+
 
         image1 = view.findViewById(R.id.datastructureID);
         image2 = view.findViewById(R.id.algorithmsID);
@@ -43,6 +46,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         image5 = view.findViewById(R.id.cppID);
         image6 = view.findViewById(R.id.algorithm2ID);
         image7 = view.findViewById(R.id.CNNID);
+        image8 = view.findViewById(R.id.SWEID);
+        image9 = view.findViewById(R.id.COAID);
 
         loadImage();
 
@@ -53,6 +58,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         heading5.setOnClickListener(this);
         heading6.setOnClickListener(this);
         heading7.setOnClickListener(this);
+        heading8.setOnClickListener(this);
+        heading9.setOnClickListener(this);
 
         return view;
     }
@@ -79,6 +86,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         Glide.with(getContext())
                 .load("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/chapters%2Fcomputer_network.png?alt=media&token=7decc4bb-ffb9-4ddd-99cd-19a5f9d2dba3")
                 .into(image7);
+        Glide.with(getContext())
+                .load("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/chapters%2FSWE.png?alt=media&token=7811fb40-2ba9-4d26-84c8-f419c49f37d5")
+                .into(image8);
+
+        Glide.with(getContext())
+                .load("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/chapters%2FCOA.png?alt=media&token=e0a119ca-6329-44d7-800d-c4963fc54455")
+                .into(image9);
+
 
     }
 
@@ -106,6 +121,12 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             startActivity(intent);
         }else if (view.getId() == R.id.CNN) {
             intent.putExtra("chapterName", "CNN");
+            startActivity(intent);
+        }else if (view.getId() == R.id.SWE) {
+            intent.putExtra("chapterName", "SWE");
+            startActivity(intent);
+        }else if (view.getId() == R.id.COA) {
+            intent.putExtra("chapterName", "COA");
             startActivity(intent);
         }
     }

@@ -16,6 +16,17 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.bumptech.glide.Glide;
 import com.hfad.csementorlearningapp.R;
+import com.hfad.csementorlearningapp.chapter.eight.Agile;
+import com.hfad.csementorlearningapp.chapter.eight.ArchitecturalPattern;
+import com.hfad.csementorlearningapp.chapter.eight.BasicOfSWE;
+import com.hfad.csementorlearningapp.chapter.eight.BlackBoxTesting;
+import com.hfad.csementorlearningapp.chapter.eight.DesignPrinciple;
+import com.hfad.csementorlearningapp.chapter.eight.DocumentationAndCodingStandards;
+import com.hfad.csementorlearningapp.chapter.eight.IssueAndBugTracking;
+import com.hfad.csementorlearningapp.chapter.eight.JUnitExamples;
+import com.hfad.csementorlearningapp.chapter.eight.SDLCAndSWProcessModel;
+import com.hfad.csementorlearningapp.chapter.eight.UserStory;
+import com.hfad.csementorlearningapp.chapter.eight.WhiteBoxTesting;
 import com.hfad.csementorlearningapp.chapter.five.ArraysAndStrings;
 import com.hfad.csementorlearningapp.chapter.five.Functions;
 import com.hfad.csementorlearningapp.chapter.five.Inheritance;
@@ -39,6 +50,21 @@ import com.hfad.csementorlearningapp.chapter.four.IntroductionToCProgramming;
 import com.hfad.csementorlearningapp.chapter.four.PointersAndArrays;
 import com.hfad.csementorlearningapp.chapter.four.ReferredBookC;
 import com.hfad.csementorlearningapp.chapter.four.StructuresAndUnions;
+import com.hfad.csementorlearningapp.chapter.nine.BasicConceptsAndComputerEvolution;
+import com.hfad.csementorlearningapp.chapter.nine.CacheMemory;
+import com.hfad.csementorlearningapp.chapter.nine.ComputerArithmetic;
+import com.hfad.csementorlearningapp.chapter.nine.ComputerFunctionAndInterconnection;
+import com.hfad.csementorlearningapp.chapter.nine.ControlUnitOperation;
+import com.hfad.csementorlearningapp.chapter.nine.ExternalMemory;
+import com.hfad.csementorlearningapp.chapter.nine.InputOutput;
+import com.hfad.csementorlearningapp.chapter.nine.InstructionLevelParallelism;
+import com.hfad.csementorlearningapp.chapter.nine.InstructionSet;
+import com.hfad.csementorlearningapp.chapter.nine.InternalMemory;
+import com.hfad.csementorlearningapp.chapter.nine.MulticoreComputers;
+import com.hfad.csementorlearningapp.chapter.nine.ParallelProcessing;
+import com.hfad.csementorlearningapp.chapter.nine.ProcessStructureAndFunction;
+import com.hfad.csementorlearningapp.chapter.nine.RISC;
+import com.hfad.csementorlearningapp.chapter.nine.WilliamStallingsBook;
 import com.hfad.csementorlearningapp.chapter.one.ArrayOperations;
 import com.hfad.csementorlearningapp.chapter.one.BasicTerminologies;
 import com.hfad.csementorlearningapp.chapter.one.Graphs;
@@ -111,8 +137,8 @@ public class TopicActivity extends AppCompatActivity {
     String chapter5[] = {"Robert Lafore Book","Balagurusamy Book","Introduction to C++","Loops and Decisions","Functions","Arrays and Strings","Objects and Classes","Inheritance","Operator Overloading","Pointers","Structures","Virtual Functions","Streams and Files","Multifile Programs"};
 
     String chapter7[] = {"B.Forouzan Book","Introduction to Computer Network","Data Link Layer","Network Layer","Network Layer Design Issues","IP Address","Transport Layer","Congestion Control and QoS","Network Security","Application Layer","ATM"};
-    String chapter8[] = {"William Stallings Book","Basic Concepts and Computer Evolution","Computer Arithmetic","Computer Function and Interconnection","Internal Memory","Cache Memory","External Memory","Control Unit Operation","Input Output","Instruction Level Parallelism","Instruction Set","Multicore Computers","Parallel Processing","Process Structure and Function","RISC"};
-    String chapter9[] = {"Introduction to Digital Image Processing","Filtering and Image Resizing","Color Model","Edge Detection","Image Moments","Image Restoration","Image Transform","Morphology","Pseudocoloring","Thresholding","Hough Transform"};
+    String chapter9[] = {"William Stallings Book","Basic Concepts and Computer Evolution","Computer Arithmetic","Computer Function and Interconnection","Internal Memory","Cache Memory","External Memory","Control Unit Operation","Input Output","Instruction Level Parallelism","Instruction Set","Multicore Computers","Parallel Processing","Process Structure and Function","RISC"};
+    String chapter19[] = {"Introduction to Digital Image Processing","Filtering and Image Resizing","Color Model","Edge Detection","Image Moments","Image Restoration","Image Transform","Morphology","Pseudocoloring","Thresholding","Hough Transform"};
     String chapter10[] = {"B. Forouzan Book","Layered Communications","Logical Link Control","MAC","Frame Relay","Data and Signals","Digital Transmission","Digital To Analog Conversion","Line Coding","Pulse Code Modulation","Delta Modulation","Multiplexing Techniques","Huffman Coding","ATM"};
     String chapter11[] = {"Referred Book of Database","Introduction to Database","Database System Architectures","Data Model","SQL","Relational Algebra","Normalization","Functional Dependency","Transactions","Data Recovery System","Indexing and Hashing","Integrity and Security"};
     String chapter12[] = {"Referred Book of Discrete Math","Proposition and Propositional Equivalence","Rules of Inference","Relations","Predicates and Quantifiers","Counting","Graph and Tree"};
@@ -122,7 +148,7 @@ public class TopicActivity extends AppCompatActivity {
     String chapter16[] = {"Referred Book of Microprocessor","Basic of Microprocessor","Data Type","Memory Organization","Keyboard and Display","8086 Pindiagram","Interrupt","8086 Interrupts","Features of Pentium Processor","DMA Controller","80286 & 80386","Semiconductor Memory","Serial Communication Interfaces"};
     String chapter17[] = {"Referred Book of NM","Introduction to Numerical Computing","Errors in Arithmetic","Errors in Integer & Floating Point Arithmetic","Boundary value & Eigen Value Problem","Direct Solution of Linear Equations","Iterative Solution of Linear Equations","Roots of Nonlinear Equations","Numerical Differentiations","Numerical Integration","Ordinary Differential Equations","Interpolation","Regression"};
     String chapter18[] = {"Referred Book of OS","Introduction to OS","Operating System Architecture","Main Memory","Virtual Memory","Process","Process Synchronization","Threads","Deadlocks","CPU Scheduling","Mass Storage Systems"};
-    String chapter19[] = {"Basic of SWE","User Story","Documentation & Coding Standards","Architectural Pattern","SDLC & SW Process Model","Design Principle","Issue & Bug Tracking","White Box Testing","Black Box Testing","Agile","Junit Examples"};
+    String chapter8[] = {"Basic of SWE","User Story","Documentation & Coding Standards","Architectural Pattern","SDLC & SW Process Model","Design Principle","Issue & Bug Tracking","White Box Testing","Black Box Testing","Agile","Junit Examples"};
     String chapter20[] = {"Basic Concepts of WN","Basic Concepts of Cognitive Radio","4G Wireless Communication","Mobile Ad-hoc Network","5G Wireles Network","Wireless Sensor Network"};
 
 
@@ -206,6 +232,20 @@ public class TopicActivity extends AppCompatActivity {
                     .load("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/chapters%2Fcomputer_network.png?alt=media&token=7decc4bb-ffb9-4ddd-99cd-19a5f9d2dba3")
                     .into(chapterImage);
             getSupportActionBar().setTitle("Computer Network");
+        }
+        else if(chapterName.equals("SWE")){
+            arr = chapter8;
+            Glide.with(TopicActivity.this)
+                    .load("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/chapters%2FSWE.png?alt=media&token=7811fb40-2ba9-4d26-84c8-f419c49f37d5")
+                    .into(chapterImage);
+            getSupportActionBar().setTitle("Software Engineering");
+        }
+        else if(chapterName.equals("COA")){
+            arr = chapter9;
+            Glide.with(TopicActivity.this)
+                    .load("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/chapters%2FCOA.png?alt=media&token=e0a119ca-6329-44d7-800d-c4963fc54455")
+                    .into(chapterImage);
+            getSupportActionBar().setTitle("Computer Architecture");
         }
         else {
             arr = null;
@@ -472,6 +512,89 @@ public class TopicActivity extends AppCompatActivity {
                 break;
             case "ATM":
                 startActivity(new Intent(TopicActivity.this, ATM.class));
+                break;
+
+
+                // SWE
+            case "Basic of SWE":
+                startActivity(new Intent(TopicActivity.this, BasicOfSWE.class));
+                break;
+            case "User Story":
+                startActivity(new Intent(TopicActivity.this, UserStory.class));
+                break;
+            case "Documentation & Coding Standards":
+                startActivity(new Intent(TopicActivity.this, DocumentationAndCodingStandards.class));
+                break;
+            case "Architectural Pattern":
+                startActivity(new Intent(TopicActivity.this, ArchitecturalPattern.class));
+                break;
+            case "SDLC & SW Process Model":
+                startActivity(new Intent(TopicActivity.this, SDLCAndSWProcessModel.class));
+                break;
+            case "Design Principle":
+                startActivity(new Intent(TopicActivity.this, DesignPrinciple.class));
+                break;
+            case "Issue & Bug Tracking":
+                startActivity(new Intent(TopicActivity.this, IssueAndBugTracking.class));
+                break;
+            case "White Box Testing":
+                startActivity(new Intent(TopicActivity.this, WhiteBoxTesting.class));
+                break;
+            case "Black Box Testing":
+                startActivity(new Intent(TopicActivity.this, BlackBoxTesting.class));
+                break;
+            case "Agile":
+                startActivity(new Intent(TopicActivity.this, Agile.class));
+                break;
+            case "Junit Examples":
+                startActivity(new Intent(TopicActivity.this, JUnitExamples.class));
+                break;
+
+                // COA
+            case "William Stallings Book":
+                startActivity(new Intent(TopicActivity.this, WilliamStallingsBook.class));
+                break;
+            case "Basic Concepts and Computer Evolution":
+                startActivity(new Intent(TopicActivity.this, BasicConceptsAndComputerEvolution.class));
+                break;
+            case "Computer Arithmetic":
+                startActivity(new Intent(TopicActivity.this, ComputerArithmetic.class));
+                break;
+            case "Computer Function and Interconnection":
+                startActivity(new Intent(TopicActivity.this, ComputerFunctionAndInterconnection.class));
+                break;
+            case "Internal Memory":
+                startActivity(new Intent(TopicActivity.this, InternalMemory.class));
+                break;
+            case "Cache Memory":
+                startActivity(new Intent(TopicActivity.this, CacheMemory.class));
+                break;
+            case "External Memory":
+                startActivity(new Intent(TopicActivity.this, ExternalMemory.class));
+                break;
+            case "Control Unit Operation":
+                startActivity(new Intent(TopicActivity.this, ControlUnitOperation.class));
+                break;
+            case "Input Output":
+                startActivity(new Intent(TopicActivity.this, InputOutput.class));
+                break;
+            case "Instruction Level Parallelism":
+                startActivity(new Intent(TopicActivity.this, InstructionLevelParallelism.class));
+                break;
+            case "Instruction Set":
+                startActivity(new Intent(TopicActivity.this, InstructionSet.class));
+                break;
+            case "Multicore Computers":
+                startActivity(new Intent(TopicActivity.this, MulticoreComputers.class));
+                break;
+            case "Parallel Processing":
+                startActivity(new Intent(TopicActivity.this, ParallelProcessing.class));
+                break;
+            case "Process Structure and Function":
+                startActivity(new Intent(TopicActivity.this, ProcessStructureAndFunction.class));
+                break;
+            case "RISC":
+                startActivity(new Intent(TopicActivity.this, RISC.class));
                 break;
 
 
