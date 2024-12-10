@@ -23,7 +23,7 @@ import com.joanzapata.pdfview.PDFView;
 import java.io.File;
 import java.io.IOException;
 
-public class IntroductionToCpp extends AppCompatActivity {
+public class Functions extends AppCompatActivity {
     private PDFView pdfView;
     private FirebaseStorage firebaseStorage;
     private StorageReference storageReference;
@@ -32,7 +32,7 @@ public class IntroductionToCpp extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_introduction_to_cpp);
+        setContentView(R.layout.activity_functions);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
@@ -45,7 +45,7 @@ public class IntroductionToCpp extends AppCompatActivity {
     }
     private void loadPdfFromFirebase() {
         // Adjust the path to your PDF file in Firebase Storage
-        storageReference = firebaseStorage.getReferenceFromUrl("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/CourseDetailsPdf%2FC%2B%2B%2FBasicsofC%2B%2B.pdf?alt=media&token=44ccb8fd-00d8-4a65-9bf9-09d25c1ab54d");
+        storageReference = firebaseStorage.getReferenceFromUrl("https://firebasestorage.googleapis.com/v0/b/csementorlearningapp.appspot.com/o/CourseDetailsPdf%2FC%2B%2B%2FFunctions.pdf?alt=media&token=52381d6d-2c17-48c6-bf55-61964ff88bb9");
 
         try {
             File localFile = File.createTempFile("temp_pdf", ".pdf");
@@ -57,7 +57,7 @@ public class IntroductionToCpp extends AppCompatActivity {
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
                 public void onFailure(@NonNull Exception exception) {
-                    Toast.makeText(IntroductionToCpp.this, "Failed to load PDF", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(Functions.this, "Failed to load PDF", Toast.LENGTH_SHORT).show();
                     Log.e("PDF_LOAD_ERROR", "Error loading PDF", exception);
                 }
             });

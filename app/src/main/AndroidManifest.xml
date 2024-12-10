@@ -17,6 +17,141 @@
         android:theme="@style/Theme.CSEMentorLearningApp"
         tools:targetApi="31">
         <activity
+            android:name=".chapter.seven.ATM"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.ApplicationLayer"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.NetworkSecurity"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.CongestionControlandQOS"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.TransportLayer"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.IPAddress"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.NetworkLayerDesignIssues"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.NetworkLayer"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.DataLinkLayer"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.IntroductionToComputerNetwork"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.seven.ReferredBookCNN"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.AVLTree"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.KMPAlgorithm"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.NetworkFlow"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.RMQTechniques"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.BinaryIndexedTree"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.SquareRootDecomposition"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.SegmentTree"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.ArticulationPointBridgeBiconnectedComponents"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.ArticulationPoint"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.ReferredBookAlgo2"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.six.SparseTable"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.MultifilePrograms"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.StreamsAndFiles"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.VirtualFunctions"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.Structures"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.Pointers"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.OperatorOverloading"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.Inheritance"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.ObjectsAndClasses"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.ArraysAndStrings"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.Functions"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.LoopsAndDecisions"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.ReferredBook2"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.five.ReferredBook1"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.DataTypesVariablesAndOperators"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.DynamicMemoryAllocation"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.StructuresAndUnions"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.FileHandlingInC"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.PointersAndArrays"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.FunctionsInC"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.ControlFlow"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.VariablesAndOperators"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.DataTypes"
+            android:exported="false" />
+        <activity
+            android:name=".chapter.four.ReferredBookC"
+            android:exported="false" />
+        <activity
             android:name=".ContributorsActivity"
             android:exported="false" />
         <activity
@@ -24,10 +159,9 @@
             android:exported="false" />
         <activity
             android:name=".ui.code.ChapterActivity"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".ui.code.VideoListActivity"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".ui.code.VideoListActivity" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".chapter.one.ReferredBookDS"
             android:exported="false" />
@@ -57,10 +191,9 @@
             android:exported="false" />
         <activity
             android:name=".chapter.two.FractionalKnapsackHuffmanCode"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".chapter.two.CoinChange"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".chapter.two.CoinChange" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".chapter.two.ActivitySelectionProblem"
             android:exported="false" />
@@ -123,25 +256,23 @@
             android:exported="false" />
         <activity
             android:name=".chapter.three.HtmlElementsAndAttributes"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".chapter.two.NpCompleteness"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".chapter.two.SortingAndSearchingAlgorithms"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".chapter.two.GraphAlgorithms"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".chapter.two.NpCompleteness" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".chapter.two.SortingAndSearchingAlgorithms" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".chapter.two.GraphAlgorithms" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".chapter.two.GreedyAlgorithms"
             android:exported="false" />
         <activity
             android:name=".chapter.two.DynamicProgramming"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".chapter.two.DivideAndConquer"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".chapter.two.DivideAndConquer" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".chapter.five.IntroductionToCpp"
             android:exported="false" />
@@ -150,22 +281,20 @@
             android:exported="false" />
         <activity
             android:name=".chapter.three.IntroductionToHtml"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".chapter.two.IntroductionToAlgorithms"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".chapter.one.AdvancedDataStructures"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".chapter.two.IntroductionToAlgorithms" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".chapter.one.AdvancedDataStructures" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".chapter.one.SortingAlgorithms"
-            android:exported="false" />
-<!--        <activity-->
-<!--            android:name=".chapter.one.HeapsAndPriorityQueues"-->
-<!--            android:exported="false" />-->
-<!--        <activity-->
-<!--            android:name=".chapter.one.Hashing"-->
-<!--            android:exported="false" />-->
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".chapter.one.HeapsAndPriorityQueues" -->
+        <!-- android:exported="false" /> -->
+        <!-- <activity -->
+        <!-- android:name=".chapter.one.Hashing" -->
+        <!-- android:exported="false" /> -->
         <activity
             android:name=".chapter.one.Graphs"
             android:exported="false" />
